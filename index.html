@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Study Abraod</title>  
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+        <link href="main.css" rel="stylesheet">
+    </head>
+
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50"> 
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbra">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#myPage">Study Abroad</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="myNavbra">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#collegeLibrary">College Library</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#leaderboard">Leaderboard</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Application Tools
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#ielts">IELTS</a></li>
+                                <li><a href="#toefl">TOEFL</a></li>
+                                <li><a href="#gre">GRE</a></li>
+                                <li><a href="#gmat">GMAT</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" data-toggle="modal" data-target="#signupModal"><span class="glyphicon glyphicon-user" ></span> SignUp</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="modal fade" id="signupModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">x</button>
+                        <h4><span class="glyphicon glyphicon-user"></span> Sign Up</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+                                
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter your password">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pwd">Repeat Password:</label>
+                                <input type="password" class="form-control" id="repeatPwd" placeholder="Repeat your password">
+                            </div>
+
+                            <button type="submit" class="btn btn-block">Submit</button>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove"></span>Cancel
+                        </button>
+                        <p>Need <a href="#">help</a>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="loginModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">x</button>
+                        <h4><span class="glyphicon glyphicon-log-in"></span> Login</h4>
+                    </div> 
+
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="userName">User Name</label>
+                            <input type="text" class="form-control" id="userName" placeholder="Please enter your email address">
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Please enter your password">
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-block">Login</button>     
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn pull-left" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove"></span>Cancel
+                        </button>
+                        <p>Not a memeber? <a href="#" data-toggle="modal" data-target="#signupModal">Sign up</a></p>
+                        <p>Forget your <a href="#">password? </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="home" class="container text-center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-traget="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="images/home1.jpg" alt="Image1"> 
+                            </div>
+
+                            <div class="item">
+                                <img src="images/home2.png" alt="Image2">
+                            </div>
+
+                            <div class="item">
+                                <img src="images/home3.jpg" alt="Images3">
+                            </div>
+
+                            <div class="item">
+                                <img src="images/home4.png" alt="Images4">
+                            </div>
+                        </div>
+
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="collegeLibrary" class="cl">
+            <div class="container">
+                <h3 class="text-center">College Library</h3>
+                <div class="well">
+                    <img class="float" src="images/harvard.png" alt="harvard" width="100" height="100">
+                    <p>Harvard University<br>
+                    Located in Massachusetts Cambridge<br>
+                    TOEFL score: 100  IELTS score: 6.5<br>
+                    SAT score: 1470 - 1600 Total annual tuition: $45278</p>
+                    <br class="clearleft">
+                </div>
+                <div class="well">
+                    <img class="float" src="images/princeton.png" alt="princeton" width="100" height="100">
+                    <p>Princeton University<br>
+                    New Jersey Princeton<br>
+                    TOEFL score: 105   IELTS score: not announced  <br>
+                    SAT score: 1470 - 1590 Total annual tuition: $43450</p><br class="clearleft">
+                </div>
+                <div class="well">
+                    <img class="float" src="images/stanford.png" alt="stanford" width="100" height="100">
+                    <p>Stanford University<br>
+                    Located in California Stanford<br>
+                    TOEFL score: 105   IELTS score: 7.5  <br>
+                    SAT score: 1450 - 1590 Total annual tuition: $47331</p><br class="clearleft">
+                </div>
+                <div class="well">
+                    <img class="float" src="images/mit.gif" alt="mit" width="100" height="100">
+                    <p>Massachusetts Institute of Technology<br>
+                    Located in Massachusetts Cambridge<br>
+                    TOEFL score: 90  IELTS score: 7.5 <br>
+                    SAT score: 1480 - 1590 Total annual tuition: $48140</p><br class="clearleft">
+                </div>
+                <div class="well">
+                    <img class="float" src="images/oxford.jpg" alt="oxford" width="100" height="100">
+                    <p>University of Oxford<br>
+                    Located in Oxford<br>
+                    IELTS results: 7 TOEFL Requirement: 110 <br>
+                    Average acceptance:17%  Total annual tuition: £20,721</p><br class="clearleft">
+                </div>
+                <div class="well">
+                    <img class="float" src="images/cambridge.jpg" alt="cambridge" width="100" height="100">
+                    <p>University of Cambridge<br>
+                    Located in Cambridge<br>
+                    IELTS results: 7.5 TOEFL Requirement: No<br>
+                    Average acceptance: 21%  Total annual tuition: £16,062<br></p><br class="clearleft">
+                </div>
+            
+            </div>
+        </div>
+
+        <div id="news">
+            <div class="container">
+                <h3 class="text-center">News </h3>
+                    <div class="well">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <img  src="images/n1.jpg" alt="cambridge" width="280" height="170">
+                            </div>
+
+                            <div class="col-sm-8">
+                                <p>　"I am not a Harvard headmaster, I am the president of Harvard", let people remember Harvard three hundred years only the only female headmaster Harvard Drew Foster. The following is the president's speech at Harvard, she told her own personal experience, why in the end we must go out to see the world.  </p>
+                                <p>Every year to go to a strange place. - this is my own one of the requirements, can be considered a plan.</p>
+                                <p>This habit seems to have been small, has continued to the present. Until today, every year I go to a strange place with the children. </p>
+                                <p>For me, traveling with learning has become a tradition, and its meaning lies in its own growth.</p>
+                                <p> Travel so that we really know the world </p>
+                                <p>world is getting smaller and smaller, we almost every day and strangers deal with, are familiar with the first of all. The children in the world have become a family, technology to make our citizens become blurred, so that communication becomes fast, so that we have to adapt to a variety of changing social environment. </p>
+                                <p>Therefore, the future of the children must be working with different people of different nationalities and living together, so to understand the whole world has become their compulsory course.</p>
+
+                            </div>
+                        </div>                
+                    </div>
+                
+            </div>
+        </div>
+
+        <div id="leaderboard" class="cl">
+            <div class="container">
+                <h3 class="text-center">Leaderboard</h3>
+                <div class="well">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#world">World</a></li>
+                        <li><a data-toggle="tab" href="#us">America</a></li>
+                        <li><a data-toggle="tab" href="#uk">British</a></li>
+                        <li><a data-toggle="tab" href="#canada">Canada</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="world" class="tab-pane fade in active">
+                            <h2 class="text-center">World University Rankings</h2>
+                            <div class="row">
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img  src="images/1.png" alt="number 1" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Harvard University</h5>
+                                    <p>Harvard University ranked first in "2017 USNews World University Ranking" in the 1 name. Harvard University, the flagship of university education in the United States, the Ivy League representative, the Harvard Business School is the planet's best business school, Harvard University, all undergraduate education level is the world's top. And Yale University, Oxford University and Cambridge University and known as the best university on Earth, is the United States one of the most difficult to apply for the university.</p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/2.png" alt="number 2" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Massachusetts Institute of Technology</h5>
+                                    <p>
+                                        Massachusetts Institute of Technology in the "2017 USNews World University Rankings" in the first two . The mission of the Massachusetts Institute of Technology is to advance the advancement of science, technology and other academic fields and to train students in the 21st century to best serve the country and the world. The scientific and technological challenges of our time are on the rise, and we have to face the daunting task of quantitative analysis and complex, integrated problems. 
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/3.png" alt="number 3" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Stanford University</h5>
+                                    <p>
+                                    tanford University ranked No. 3 in the "2017 USNews World University Rankings" . Stanford University is recognized as a world famous university. In addition to the well-known professors to teach first-class knowledge, the school also has a very rich extra-curricular activities and participate in research, independent research and public service opportunities. The mission of the school is "to enable students to achieve personal achievement, become useful material" and "through the impact of human and civilization, for the public welfare.”
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/4.png" alt="number 4" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of California-Berkeley</h5>
+                                    <p>
+                                        University of California at Berkeley in "2017 USNews World University Rankings" in the fourth . - University of California, Berkeley is a world-renowned university, in the US News issued by the civil engineering, environmental engineering, ecology, chemistry, computer science and related professional rankings are ranked first in the United States. -US News ranked the school 21th in the nation and the top 10 in 130 professional ranks.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/5.png" alt="number 5" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>California Institute of Technology</h5>
+                                    <p>
+                                        California Institute of Technology in the "2017 USNews World University Rankings" in the first five . California Institute of Technology in Pasadena, California, it is generally known as the "California Institute of Technology." California Institute of Technology is a private elite research institute, the school has a total of 6 teaching division, providing 24 professional and 6 minor professional, engineering and technical courses which prestigious.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/6.png" alt="number 6" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Oxford</h5>
+                                    <p>
+                                        Oxford University (University of Oxford) is the English-speaking world's oldest university, a "genius and the cradle of the prime minister," said the name. Is one of Britain's most prestigious institutions of higher learning, Oxford University is famous in the world, its reputation has been growing, one third from the British mainland students. 93% of the students expressed satisfaction with their classroom quality. The school's teachers are from all over the world's highly academic authority.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/7.png" alt="number 7" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Cambridge</h5>
+                                    <p>
+                                    The University of Cambridge is one of the top ten universities in the world. It is famous for its outstanding educational quality. Many famous scientists, writers and politicians in Britain come from this university. 2011 US News and World Report and higher education research institutions QS jointly published US NEWS-QS World University Rankings ranked first in the world. Cambridge is a city in the east of England, 50 kilometers north of London.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/8.png" alt="number 8" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Princeton University</h5>
+                                    <p>
+                                        Princeton University in the "2017 USNews World University Rankings" ranked eighth . Princeton University was founded in 1746, is a Ivy League private university. The 600-acre campus is located in a neighborhood of Princeton, 50 miles southwest of New York City. The main campus buildings are of the Grurean and Gothic styles, as well as modern buildings designed by IM Pei and Robert Venturi.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/9.png" alt="number 9" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Columbia University</h5>
+                                    <p>
+                                    Columbia University in the "2017 USNews World University Rankings" ranked ninth . Columbia University is located in the world's most prosperous city - New York City. Columbia University covers a number of academic fields, is a leader in the field of science; creative vision of the field of creativity; the new benchmark in the field of humanities and innovative ideas in the field of engineering.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/10.png" alt="number 10" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of California-Los Angeles</h5>
+                                    <p>
+                                    UCLA is ranked 10th in the 2017 USNews World University Rankings . - UCLA published in US News American University Rankings ranked No. 25, the electrical engineering and environmental engineering schools are ranked in the top 20, ranked in the nation's first commercial 15. - Alumni of the University of California at Los Angeles, including 14 Nobel Prize winners, as well as the CEO of the BlackRock Group, the Hilton Hotel, Suntory Group
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="us" class="tab-pane fade">
+                            <h2 class="text-center">American University Rankings</h2>
+                            <div class="row">
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/1.png" alt="number 1" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Princeton University</h5>
+                                    <p>
+                                        Princeton University ranked first in "2016 USNews American University Ranking" in the 1 name. Princeton University was founded in 1746, is a Ivy League private university. The 600-acre campus is located in a neighborhood of Princeton, 50 miles southwest of New York City. The main campus buildings are of the Grurean and Gothic styles, as well as modern buildings designed by IM Pei and Robert Venturi.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/2.png" alt="number 2" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Harvard University</h5>
+                                    <p>
+                                        Harvard University ranked first in "2016 USNews American University Ranking" in the 2 names. Harvard University, the flagship of university education in the United States, the Ivy League representative, the Harvard Business School is the planet's best business school, Harvard University, all undergraduate education level is the world's top. And Yale University, Oxford University and Cambridge University and known as the best university on Earth, is the United States one of the most difficult to apply for the university.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/3.png" alt="number 3" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Yale University</h5>
+                                    <p>
+                                        Yale University in the "2016 USNews American University Ranking" in the third . Yale University was founded in 1701 and has always been one of the most acclaimed schools in the United States. In addition to diverse students, global vision and outstanding research achievements, Yale University also advocates promoting change. Many people believe that Yale University is mainly an undergraduate school, that is, Yale College.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img  src="images/4.png" alt="number 4" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Columbia University</h5>
+                                    <p>
+                                        Columbia University ranks fourth in the "2016 USNews American University Rankings" . Columbia University is located in the world's most prosperous city - New York City. Columbia University covers a number of academic fields, is a leader in the field of science; creative vision of the field of creativity; the new benchmark in the field of humanities and innovative ideas in the field of engineering. Columbia College and Columbia Institute of Engineering in the undergraduate students were 4100 and 1400, each student should learn our first-class core courses. 
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/4.png" alt="number 4" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Stanford University</h5>
+                                    <p>
+                                        Stanford University ranked fourth in the "2016 USNews American University Rankings" . Stanford University is recognized as a world famous university. In addition to the well-known professors to teach first-class knowledge, the school also has a very rich extra-curricular activities and participate in research, independent research and public service opportunities
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img  src="images/4.png" alt="number 4"width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>The University of Chicago</h5>
+                                    <p>
+                                        University of Chicago in the "2016 USNews American University Rankings" in the fourth . Chicago University (University of Chicago, UChicago or Chicago) Advantages: - Has the nation's top economics. - the proportion of teachers and students 6: 1; in all undergraduate courses in about 77% of the following 20 classes, 50 or more only 5.7% of the big class. - The school is located in Chicago, the third largest city in the United States, to facilitate students' life, internship and employment.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img  src="images/7.png" alt="number 7" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Massachusetts Institute of Technology</h5>
+                                    <p>
+                                        Massachusetts Institute of Technology Ranked No. 7 in the "2016 USNews American University Rankings" . The mission of the Massachusetts Institute of Technology is to advance the advancement of science, technology and other academic fields and to train students in the 21st century to best serve the country and the world. The scientific and technological challenges of our time are on the rise, and we have to face the daunting task of quantitative analysis and complex, integrated problems. 
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/8.png" alt="number 8"width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Duke University</h5>
+                                    <p>
+                                        Duke University in the "2016 USNews American University Rankings" ranked eighth . Duke University is an international brand-name research institutions, the school is located in Durham, North Carolina, covers an area of ​​nearly 9000 acres. More than 6,000 undergraduate students, from biomedical engineering to Slav and Eurasian studies, including more than 40 disciplines. The school has excellent sports associations, innovative research facilities, and is committed to applying knowledge to improve social conditions.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/9.png" alt="number 9" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Pennsylvania</h5>
+                                    <p>
+                                        University of Pennsylvania ranks ninth in the "2016 USNews American University Rankings" . University of Pennsylvania is a private university founded in 1740. It offers a wide range of courses for students in the fields of science, art, engineering and applied technology. One of the famous Wharton School of business elite to cultivate famous. And its 260-acre campus is only 2 kilometers from downtown Philadelphia, enough to see the school's close ties with the community.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/10.png" alt="number 10" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>California Institute of Technology</h5>
+                                    <p>
+                                        The California Institute of Technology ranks 10th in the "2016 USNews American University Rankings" . California Institute of Technology in Pasadena, California, it is generally known as the "California Institute of Technology." California Institute of Technology is a private elite research institute, the school has a total of 6 teaching division, providing 24 professional and 6 minor professional, engineering and technical courses which prestigious.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="uk" class="tab-pane fade">
+                            <h2 class="text-center">Rankings of the British Universities</h2>
+                            <div class="row">
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/1.png" alt="number 1" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Cambridge</h5>
+                                    <p>
+                                        The University of Cambridge is one of the top ten universities in the world. It is famous for its outstanding educational quality. Many famous scientists, writers and politicians in Britain come from this university. 2011 US News and World Report and higher education research institutions QS jointly published US NEWS-QS World University Rankings ranked first in the world. Cambridge is a city in the east of England, 50 kilometers north of London. 
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/2.png" alt="number 2"width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Oxford university</h5>
+                                    <p>
+                                        Oxford University (University of Oxford) is the English-speaking world's oldest university, a "genius and the cradle of the prime minister," said the name. Is one of Britain's most prestigious institutions of higher learning, Oxford University is famous in the world, its reputation has been growing, one third from the British mainland students. 93% of the students expressed satisfaction with their classroom quality. The school's teachers are from all over the world's highly academic authority. 
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img   src="images/3.png" alt="number 3" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University College London</h5>
+                                    <p>
+                                        University College London (University College London), the British Guard ranked sixth. Is a comprehensive university established in 1826, the United Kingdom following Oxford, Cambridge after the third old university. London University College and Oxford University, Cambridge University, Imperial College of Technology, London School of Economics and Political Science, together known as G5 Super Elite University. University of London College of the British government to enjoy the most budget, is a member of the Golden Triangle.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img  src="images/4.png" alt="number 4" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Imperial College of Technology</h5>
+                                    <p>
+                                        Imperial College London The main campus of Imperial College London is located in the heart of London - South Kensington. In 1996, the UK Higher Education Fund Committee's research assessment, mathematics, computer science, chemical engineering, civil engineering, mechanical engineering And other 15 professional have scored five points, teachers are extremely strong, with excellent teaching ability.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/5.png" alt="number 5" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>King's College London</h5>
+                                    <p>
+                                        King's College London is one of the world's top 30 universities in the heart of London and the fourth oldest school in the UK. In its 2008 study of UK universities, 23 departments were among the top universities in the UK , King's College London in humanities, law, and social sciences, including international affairs has a very outstanding achievement. Ranked 31 in the Guardian.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/6.png" alt="number 6" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Edinburgh</h5>
+                                    <p>
+                                        The University of Edinburgh is located in the heart of Edinburgh, the capital of Scotland, the fourth in Scotland and the sixth university in the English world. Ranked 15th in the British Guardian, RAE was awarded in 2008 by high-quality experimental research and high-quality teaching institutions, ranking one of the top 20 in the world. 
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img  src="images/7.png" alt="number 7" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Manchester</h5>
+                                    <p>
+                                        The University of Manchester is a compact city campus, within walking distance to Oxford Road in the city center. The university has a lot of flexible opportunities to offer to students, including study abroad and industrial arrangements. In 2008 RAE evaluation, Manchester University in Oxford University and University of Cambridge after the third was awarded the title of scientific research authority, is a glorious history of a world-class comprehensive university.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/8.png" alt="number 8" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>London School of Economics and Political Science</h5>
+                                    <p>
+                                        The London School of Economics and Political Science, one of the largest in the University of London, is the only school to focus teaching and research on social, political and economic sciences. The London School of Economics and Political Science has been awarded the title of "World Leading Research University".
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img  src="images/9.png" alt="number 9" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Bristol</h5>
+                                    <p>
+                                        University of Bristol (University of Bristol) is located in the southwest England Avon Bristol City, Bristol International Airport, Bristol bus station, coach station, and convenient transportation. The school has a royal authority, teaching and research strength are very strong, enjoy the prestigious, is a veritable international university, is also the British university, second only to Oxford, Cambridge and the University of London, get the highest level of assessment of the university.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/10.png" alt="number 10" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Warwick</h5>
+                                    <p>
+                                        University of Warwick (University of Warwick), is a famous British campus university, one of the most prestigious universities, the British Guard ranked fifth. There are 20,000 students, of which about 20% are from 125 countries in the world of international students. Here, the culture can exchange collision. To provide students with a good learning environment, Warwick University has two major libraries to help students learn. 
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="canada" class="tab-pane fade">
+                            <h2 class="text-center">Canadian University Rankings</h2>
+                            <div class="row">
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img  src="images/1.png" alt="number 1" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>McGill University</h5>
+                                    <p>
+                                        McGill University (McGill University) has become a result of academic achievements and scientific discovery of international reputation of the University. Sophisticated facilities, innovative teaching programs and interdisciplinary research have attracted first class professors and students from all over the world, making McGill Canada one of the most diverse universities in the world, as well as Canada's "Ivy".
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/2.png" alt="number 2" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of British Columbia</h5>
+                                    <p>
+                                    The University of British Columbia's Vancouver campus is located in the heart of Vancouver and is a world-renowned institution with excellent international reputation and influence in academic research and education. The school is excellent in the top universities in Canada and is also ranked first in the top 50 in the world.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/3.png" alt="number 3" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Toronto</h5>
+                                    <p>
+                                    University of Toronto (University of Toronto) is Canada's largest institution of higher learning, is recognized as the world's leading research and education institutions. Outstanding teaching teams, groundbreaking scholarships, and a myriad of innovative academic opportunities continue to attract outstanding students and academics worldwide. According to Thames College of Higher Education and Thomson Reuters to provide world-renowned university rankings, how many ranked first in Canada and the world seventeen.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/4.png" alt="number 4" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>Queen's University</h5>
+                                    <p>
+                                    Queen's University is one of Canada's oldest and most prestigious universities and is the second oldest university in Ontario. It is the first university in Kingston, Ontario, Canada. , The first to obtain a degree institution. Queen's University of the teaching of the world's praise, its contribution to scientific research and innovation has also been a great honor.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img  src="images/5.png" alt="number 5" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Alberta</h5>
+                                    <p>
+                                    The University of Alberta is one of Canada's best research universities located in the heart of Edmonton, capital of the province of Alberta, Canada, on the south bank of North Saskatchewan. In the Shanghai Jiaotong University World University Rankings ranked fifth in Canada. It is also one of the largest research universities in Canada and the world's top 100 universities. 
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/6.png" alt="number 6" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>McMaster University</h5>
+                                    <p>
+                                    McMaster University is conveniently located in the city of Hamilton, Ontario, just minutes away from the city center. School teachers are strong, students are excellent, teachers and students to explore learning, academic atmosphere. McMaster University also has a lot of activities to help students get more social experience. Such as overseas exchange study, internships, associations and so on.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/7.png" alt="number 7" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Durham</h5>
+                                    <p>
+                                    Dalhousie University is an international university with international students enrolled in the first year who automatically receive scholarships. The University of Monterey has the lowest ratio of teachers and students in Canadian universities to 14: 1. , Students receive a high degree of concern, can be led by the world's leading professors to learn and engage in research. The University of Monterey is ideally located in the beautiful harbor city of Halifax.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/8.png" alt="number 8" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Calgary</h5>
+                                    <p>
+                                    University of Calgary (University of Calgary) is a comprehensive research university. The top 8 in the Canadian Research Universities is one of the 15 research-intensive universities in Canada, and the Times University's ranking of higher education is 170. The University of Calgary has a wide range of academic foundation programs, including: academic success, excellence in research, scholarships and creative activities, interdisciplinary education and research.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/9.png" alt="number 9" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Saskatchewan</h5>
+                                    <p>
+                                    University of Saskatchewan is one of Canada's 15 doctoral universities and one of Canada's largest teaching and research universities. The average student achievement is ranked sixth in the Canadian university, and the international student graduation rate ranks first in the Canadian university.
+                                    </p>
+                                </div>
+
+                                <div class="col-sm-offset-1 col-sm-1">
+                                    <img src="images/10.png" alt="number 10" width="80" height="80">
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-8">
+                                    <h5>University of Ottawa</h5>
+                                    <p>
+                                    The University of Ottawa is the oldest and largest bilingual (English and French) university in Canada, and a recognized Catholic university offering traditional university education to students as well as a leader in adult education. The goal of the University of Ottawa is to provide students with the best and most receptive teaching program, and today, it has become a fame academic center. At the same time, the school will also provide scholarships for international students to support. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ielts">
+            <div class="container">
+                <h3 class="text-center">IELTS</h3>
+                <div class="vedio">
+                    <h5>IELTS Speaking Test</h5>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sRFEKvsw-vs" frameborder="0" allowfullscreen></iframe>
+                    </div><br><br><br>
+
+                    <h5>IELTS Speaking test sample</h5>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="200" height="315" src="https://www.youtube.com/embed/cAf41I68HD8" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="toefl">
+            <div class="container">
+                <h3 class="text-center">TOEFL</h3>
+                <h5> The Format of the TOEFL </h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="100" height="200" src="https://www.youtube.com/embed/tPkfMf-FFW8" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <footer class="text-center"> 
+        <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <p>&copy;StudyAbroad</p>    
+    </footer>
+</html>
